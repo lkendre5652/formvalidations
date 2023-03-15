@@ -1,4 +1,10 @@
 <?php 
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    // Redirect to an error page or exit the script
+    header('Location: /testinglk/phpoops/rgform.php');
+    exit;
+}
  
 include("config.php");
 
