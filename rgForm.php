@@ -17,9 +17,10 @@
   </head>
   <body>
     
-    <div class="container">
+<div class="container ">
+  <h2 class="text-success text-center ">Registration Form</h2>
       
-<form class="needs-validation" novalidate method="post" action="" id="regForm" enctype="multipart/form-data">
+<form class="needs-validation " novalidate method="post" action="" id="regForm" enctype="multipart/form-data">
   <div class="form-row">
 
 
@@ -27,7 +28,7 @@
       <label for="fname">First name</label>
       <input type="text" class="form-control" id="fname"  name="fname"  placeholder="First name" required>
       <div class="invalid-feedback">
-        Looks good!
+        Please insert valid input.
       </div>
     </div>
 
@@ -35,7 +36,7 @@
       <label for="mname">Middle name</label>
       <input type="text" class="form-control" id="mname" name="mname"  placeholder="Middle name" required>
       <div class="invalid-feedback">
-        Looks good!
+        Please insert valid input.
       </div>
     </div>
 
@@ -43,7 +44,7 @@
       <label for="lname">Last name</label>
       <input type="text" class="form-control" id="lname" name="lname" placeholder="Last name" required>
       <div class="invalid-feedback">
-        Looks good!
+        Please insert valid input.
       </div>
     </div>
 
@@ -52,7 +53,7 @@
       <label for="lname">Email</label>
       <input type="text" class="form-control" id="ename" name="ename" placeholder="Email" required>
       <div class="invalid-feedback">
-        Looks good!
+        Please insert valid input.
       </div>
     </div>
 
@@ -60,7 +61,7 @@
       <label for="lname">Contact</label>
       <input type="text" class="form-control" id="cname" name="cname" placeholder="Contact" required>
       <div class="invalid-feedback">
-        Looks good!
+        Please insert valid input.
       </div>
     </div>
 
@@ -68,7 +69,7 @@
       <label for="lname">Address</label>
       <input type="text" class="form-control" id="address" name="address" placeholder="Address" required>
       <div class="invalid-feedback">
-        Looks good!
+        Please insert valid input.
       </div>
     </div>
     <div class="col-md-4 mb-3">
@@ -79,7 +80,7 @@
         <option value="C">C</option>
         <option>PHP</option>    
       </select>
-      <div class="invalid-feedback">Looks good!</div>
+      <div class="invalid-feedback">Please insert valid input.</div>
     </div>
 
     <div class="col-md-4 mb-3">
@@ -89,7 +90,7 @@
         <option value="1" >1</option>
         <option value="Other" >Other</option>    
       </select>
-      <div class="invalid-feedback">Looks good!</div>
+      <div class="invalid-feedback">Please insert valid input.</div>
       <input type="text" class="form-control d-none mt-2" id="vname" name="vname" placeholder="Type Here.." required>
       
     </div>
@@ -102,9 +103,9 @@
       
     </div>    
   </div> 
-  <button class="btn btn-primary" type="submit">Register</button>
+  <button class="btn btn-primary" id="rgSubmit" type="submit">Register</button>
 </form>
-
+  <span id="csmg"></span>
     </div>
 
 
@@ -242,8 +243,35 @@
                 data: formData,                
                 processData: false,
                 contentType: false,
+                beforeSend: function(){                  
+                  
+                  $('#rgSubmit').attr('disabled', 'disabled');
+                },
+                complete: function(){
+                  $('#rgSubmit').removeAttr('disabled'); 
+                },
+                error: function(resp){
+                  $("#csmg").text("failed");
+                  $("#csmg").addClass("text-warning");
+                  $('#rgSubmit').removeAttr('disabled'); 
+                },
                 success: function(resp){
-                  console.log(resp);
+                  alert(2)
+                  const rs = JSON.parse(resp);
+                  console.log(rs.status);
+                  if(rs.status === "success" ){
+                    alert(0)
+                    document.getElementById("csmg").innerText= rs.msg;
+                    $("#csmg").addClass(rs.cls);
+                  }
+
+                  if(rs.status === "failed" ){
+                    alert(1)
+                    document.getElementById("csmg").innerText= rs.msg;
+                    $("#csmg").addClass(rs.cls);
+                  }
+
+
                 }
               });
             }

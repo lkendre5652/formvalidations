@@ -1,15 +1,8 @@
 <?php 
 
-// class 
-// object
-// constructor
-// desctuctor
-// inheritance : single inheritance
-// access modifiers 
-// constants
-// abstract class method
-// inheritance 
-//traits
+// Iterable
+
+// iterable  introduced in 7.1 in  php version
 
 
 
