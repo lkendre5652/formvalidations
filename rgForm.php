@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>registration form</title>
     
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
     </script>
@@ -26,7 +26,7 @@
 
     <div class="col-md-4 mb-3">
       <label for="fname">First name</label>
-      <input type="text" class="form-control" id="fname"  name="fname"  placeholder="First name" required>
+      <input maxlength="50" type="text" class="form-control" id="fname"  name="fname"  placeholder="First name" required>
       <div class="invalid-feedback">
         Please insert valid input.
       </div>
@@ -34,7 +34,7 @@
 
     <div class="col-md-4 mb-3">
       <label for="mname">Middle name</label>
-      <input type="text" class="form-control" id="mname" name="mname"  placeholder="Middle name" required>
+      <input maxlength="50" type="text" class="form-control" id="mname" name="mname"  placeholder="Middle name" required>
       <div class="invalid-feedback">
         Please insert valid input.
       </div>
@@ -42,7 +42,7 @@
 
     <div class="col-md-4 mb-3">
       <label for="lname">Last name</label>
-      <input type="text" class="form-control" id="lname" name="lname" placeholder="Last name" required>
+      <input maxlength="50" type="text" class="form-control" id="lname" name="lname" placeholder="Last name" required>
       <div class="invalid-feedback">
         Please insert valid input.
       </div>
@@ -51,7 +51,7 @@
 
     <div class="col-md-4 mb-3">
       <label for="lname">Email</label>
-      <input type="text" class="form-control" id="ename" name="ename" placeholder="Email" required>
+      <input maxlength="50" type="text" class="form-control" id="ename" name="ename" placeholder="Email" required>
       <div class="invalid-feedback">
         Please insert valid input.
       </div>
@@ -59,7 +59,7 @@
 
     <div class="col-md-4 mb-3">
       <label for="lname">Contact</label>
-      <input type="text" class="form-control" id="cname" name="cname" placeholder="Contact" required>
+      <input maxlength="15" minlength="8" type="text" class="form-control" id="cname" name="cname" placeholder="Contact" required>
       <div class="invalid-feedback">
         Please insert valid input.
       </div>
@@ -67,7 +67,7 @@
 
     <div class="col-md-4 mb-3">
       <label for="lname">Address</label>
-      <input type="text" class="form-control" id="address" name="address" placeholder="Address" required>
+      <input maxlength="50" type="text" class="form-control" id="address" name="address" placeholder="Address" required>
       <div class="invalid-feedback">
         Please insert valid input.
       </div>
@@ -91,7 +91,7 @@
         <option value="Other" >Other</option>    
       </select>
       <div class="invalid-feedback">Please insert valid input.</div>
-      <input type="text" class="form-control d-none mt-2" id="vname" name="vname" placeholder="Type Here.." required>
+      <input maxlength="50" type="text" class="form-control d-none mt-2" id="vname" name="vname" placeholder="Type Here.." required>
       
     </div>
 
@@ -105,7 +105,9 @@
   </div> 
   <button class="btn btn-primary" id="rgSubmit" type="submit">Register</button>
 </form>
+
   <span id="csmg"></span>
+  
     </div>
 
 
