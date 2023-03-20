@@ -24,70 +24,93 @@
   <div class="form-row">
 
 
-    <div class="col-md-4 mb-3">
-      <label for="fname">First name</label>
-      <input maxlength="50" type="text" class="form-control" id="fname"  name="fname"  placeholder="First name" required>
+    <div class="col-md-4 mb-1">
+      <label for="fname">First name*</label>
+      <input maxlength="50" type="text" class="form-control" id="fname"  name="fname"  placeholder="First name*" required>
       <div class="invalid-feedback">
         Please insert valid input.
       </div>
     </div>
 
-    <div class="col-md-4 mb-3">
+    <div class="col-md-4 mb-1">
       <label for="mname">Middle name</label>
-      <input maxlength="50" type="text" class="form-control" id="mname" name="mname"  placeholder="Middle name" required>
+      <input maxlength="50" type="text" class="form-control" id="mname" name="mname"  placeholder="Middle name" >
       <div class="invalid-feedback">
         Please insert valid input.
       </div>
     </div>
 
-    <div class="col-md-4 mb-3">
-      <label for="lname">Last name</label>
-      <input maxlength="50" type="text" class="form-control" id="lname" name="lname" placeholder="Last name" required>
+    <div class="col-md-4 mb-1">
+      <label for="lname">Last name*</label>
+      <input maxlength="50" type="text" class="form-control" id="lname" name="lname" placeholder="Last name*" required>
       <div class="invalid-feedback">
         Please insert valid input.
       </div>
     </div>
 
 
-    <div class="col-md-4 mb-3">
-      <label for="lname">Email</label>
-      <input maxlength="50" type="text" class="form-control" id="ename" name="ename" placeholder="Email" required>
+    <div class="col-md-4 mb-1">
+      <label for="lname">Email*</label>
+      <input maxlength="50" type="text" class="form-control" id="ename" name="ename" placeholder="Email*" required>
       <div class="invalid-feedback">
         Please insert valid input.
       </div>
     </div>
 
-    <div class="col-md-4 mb-3">
-      <label for="lname">Contact</label>
-      <input maxlength="15" minlength="8" type="text" class="form-control" id="cname" name="cname" placeholder="Contact" required>
+    <div class="col-md-4 mb-1">
+      <label for="lname">Contact*</label>
+      <input maxlength="15" minlength="8" type="text" class="form-control" id="cname" name="cname" placeholder="Contact*" required>
       <div class="invalid-feedback">
         Please insert valid input.
       </div>
-    </div>
+    </div>   
 
-    <div class="col-md-4 mb-3">
-      <label for="lname">Address</label>
-      <input maxlength="50" type="text" class="form-control" id="address" name="address" placeholder="Address" required>
-      <div class="invalid-feedback">
-        Please insert valid input.
-      </div>
-    </div>
-    <div class="col-md-4 mb-3">
-      <label for="skills">Skills</label>
-      <select class="form-control" id="skills" name="skills" >
-        <option value="">Select Skill</option>
+
+    <div class="col-md-4 mb-1">
+      <label for="skills">Skills*</label>
+      <select class="form-control" id="skills" name="skills" onchange="getChange(this)" >
+        <option value="">Select Skill*</option>
+        <option value="Python">Python</option>
+        <option value="C#">C#</option>
+        <option value="C++">C++</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="PHP">PHP</option>
+        <option value="Dot Net">Dot Net</option>
         <option value="Java">Java</option>
-        <option value="C">C</option>
-        <option>PHP</option>    
+        <option value="Other" >Other</option>
+
       </select>
       <div class="invalid-feedback">Please insert valid input.</div>
+      <input maxlength="50" type="text" class="form-control d-none mt-2" id="sname" name="sname" placeholder="Type Here.." required>
     </div>
 
-    <div class="col-md-4 mb-3">
-      <label for="address1">Address 1</label>
-      <select class="form-control" id="address1" name="address1" onchange="getChange(this.value)">
-        <option value="">Select Address 1</option>
-        <option value="1" >1</option>
+    <div class="col-md-4 mb-1">
+      <label for="address1">Address 1*</label>
+      <select class="form-control" id="address1" name="address1" onchange="getChange(this)">
+        <option value="">Select Address 1*</option>
+        <option value="E1">E1</option>
+        <option value="E2 ">E2 </option>
+        <option value="F-1">F-1</option>
+        <option value="H-1B">H-1B</option>
+        <option value="H-1C">H-1C</option>
+        <option value="H-2A">H-2A</option>
+        <option value="H-2B">H-2B</option>
+        <option value="H-3 ">H-3 </option>
+        <option value="I ">I </option>
+        <option value="J-1 ">J-1 </option>
+        <option value="K-1 ">K-1 </option>
+        <option value="L-1 ">L-1 </option>
+        <option value="M-1 ">M-1 </option>
+        <option value="O-1">O-1</option>
+        <option value="O-2   ">O-2   </option>
+        <option value="P-1">P-1</option>
+        <option value="P-2">P-2</option>
+        <option value="P-3  ">P-3  </option>
+        <option value="Q-1">Q-1</option>
+        <option value="Q-2    ">Q-2    </option>
+        <option value="R-1 ">R-1 </option>
+        <option value="TC  ">TC  </option>
+        <option value="TN">TN</option>
         <option value="Other" >Other</option>    
       </select>
       <div class="invalid-feedback">Please insert valid input.</div>
@@ -95,13 +118,42 @@
       
     </div>
 
-     <div class="col-md-4 mb-3">
-      <label for="resume">Resume</label>
+     <div class="col-md-4 mb-1">
+      <label for="resume">Resume*</label>
        <input type="file" class="custom-file-input" id="resume" name="resume" required>
        <label class="custom-file-label" for="validatedCustomFile" style="top: 31px !important; ">Choose file...</label>
         <div class="invalid-feedback">Example invalid custom file feedback</div>
       
+    </div> 
+
+    <!-- address -->
+
+    <div class="col-md-4 mb-1">
+      <label for="lname">Address*</label>
+      <input maxlength="50" type="text" class="form-control" id="address" name="address" placeholder="Street*" required>      
+      <div class="invalid-feedback"> <!-- https://api.zippopotam.us/us/90210 -->
+        Please insert valid input.
+      </div>      
+    </div>
+
+    
+     <div class="col-md-4 mb-1">      
+      <input maxlength="50" type="text" class="form-control" id="address_city" name="address_city" placeholder="City" >                
+    </div> 
+
+    <div class="col-md-4 mb-1">      
+      <input maxlength="50" type="text" class="form-control" id="address_state" name="address_state" placeholder="State" >                 
     </div>    
+
+    <div class="col-md-4 mb-1">      
+      <input maxlength="5" type="text" class="form-control" id="address_zip" onchange="getAddress(this)" name="address_zip" placeholder="Zip Code*" required>  
+      <div class="invalid-feedback"> <!-- https://api.zippopotam.us/us/90210 -->
+        Please insert valid input.
+      </div> 
+    </div>
+
+    <!-- address -->
+
   </div> 
   <button class="btn btn-primary" id="rgSubmit" type="submit">Register</button>
 </form>
@@ -115,12 +167,34 @@
 
   <script>
 
-    function getChange(values){
-      if(values === "Other" ){
-        alert("Other...");
-        $("#vname").removeClass("d-none");
+    function getAddress(values){      
+
+    $.ajax({
+      url: `https://api.zippopotam.us/us/${values.value}`,
+      method: 'GET',
+      dataType: 'json',
+      success: function(response) {
+        const rsp = response.places
+        console.log(rsp[0].state );
+        console.log(rsp['state']);
+        document.getElementById("address_city").value = rsp[0]['place name'];
+        document.getElementById("address_state").value = rsp[0]['state'];      
+      },
+      error: function(xhr, status, error) {
+        
+      }
+    });
+
+    }
+
+    function getChange(values){                    
+      var getId = $(values).next().next().attr('id');        
+      if(values.value === "Other" ){               
+        $("#"+getId).removeClass("d-none");
+
       }else{
-        $("#vname").addClass("d-none");
+        $("#"+getId).addClass("d-none");
+        $("#"+getId).val("");
       }
     }
 
@@ -146,6 +220,7 @@
                 var address = 0;
                 var address1 = 0;
                 var skills = 0;
+                var zipslt = 0;
 
               for( const pairs of formData.entries() ){                              
 
@@ -161,7 +236,7 @@
                 }
 
                 if(pairs[0] === "mname" ){
-                  if( pairs[1] === ""  || !strRgx.test(pairs[1])  ){
+                  if( !strRgx.test(pairs[1])  ){
                     $("#mname").next().show();
                        mrslt = 1    
                   }else{
@@ -236,9 +311,22 @@
                   }
                 }
 
+                // zip required
+                const zipRgx = /^[0-9]{5}/;
+                if(pairs[0] === "address_zip"  ){
+                  if( pairs[1] === ""  || !zipRgx.test(pairs[1]) ){
+                    $("#address_zip").next().show();
+                      zipslt = 1                  
+                  }else{
+                    $("#address_zip").next().hide(); 
+                    zipslt = 2                                         
+                  }
+                }
+
+
 
             }          
-            if( frslt == 2 && mrslt == "2" && lrslt == "2" && ename === 2 && cname === 2 && address === 2 && address1 == 2 && skills == 2 ){
+            if( frslt == 2 && mrslt == "2" && lrslt == "2" && ename === 2 && cname === 2 && address === 2 && address1 == 2 && skills == 2 && zipslt === 2 ){
               $.ajax({
                 url : "index1.php",
                 method: "POST",
