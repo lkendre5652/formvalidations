@@ -122,8 +122,7 @@
       <label for="resume">Resume*</label>
        <input type="file" class="custom-file-input" id="resume" name="resume" required>
        <label class="custom-file-label" for="validatedCustomFile" style="top: 31px !important; ">Choose file...</label>
-        <div class="invalid-feedback">Example invalid custom file feedback</div>
-      
+        <div class="invalid-feedback">Example invalid custom file feedback</div>      
     </div> 
 
     <!-- address -->

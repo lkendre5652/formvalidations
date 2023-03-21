@@ -28,7 +28,7 @@ $file_error = $_FILES['resume']['error'];
 move_uploaded_file($file_tmp, "uploads/" . $file_name);
 $file_content = file_get_contents($file_tmp);
 
-if( !empty($_POST['fname']) && !empty($_POST['mname']) && !empty($_POST['lname']) && !empty($_POST['ename']) && !empty($_POST['cname']) && !empty($_POST['address']) && !empty($_POST['skills']) && !empty($_POST['address1'])  && !empty($file_name)   ){
+if( !empty($_POST['fname']) && !empty($_POST['mname']) && !empty($_POST['lname']) && !empty($_POST['ename']) && !empty($_POST['cname']) && !empty($_POST['address']) && !empty($_POST['skills']) && !empty($_POST['address1'])     ){
 
 	$query = "INSERT INTO empdata (fname,mname,lname,ename,cname,address,skills,address1,resume) VALUES( '$fname','$mname','$lname','$ename','$cname','$address','$skills','$address1','$resume' ) ";
 
